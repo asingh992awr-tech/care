@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Always</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient background layer: clouds, stars, sparkles, petals, butterflies -->
+  <div class="sky" aria-hidden="true" id="sky"></div>
+
+  <!-- Corner stickers -->
+  <div class="sticker sticker--bear sticker--tl" aria-hidden="true">🧸</div>
+  <div class="sticker sticker--bow sticker--tr" aria-hidden="true">🎀</div>
+  <div class="sticker sticker--bear sticker--bl" aria-hidden="true">🧸</div>
+  <div class="sticker sticker--flower sticker--br" aria-hidden="true">🌼</div>
+
+  <!-- Music toggle -->
+<audio id="bgMusic" autoplay loop>
+  <source src="Khaab Akhil 128 Kbps.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-btn" aria-label="Play soft music" title="Play a little music">
+  <span class="music-icon">♪</span>
+</button>
+  <main class="stage" id="stage">
+
+    <!-- Scene 1 : Greeting -->
+    <section class="scene is-active" data-scene="1">
+      <h1 class="heading">Hey Beautiful ❤️</h1>
+      <p class="line">Ajj tere sar mai dard ho raha hai na </p>
+      <p class="line">So I made something just for you.</p>
+      <p class="line">I hope tujhe pasand ayega</p>
+      <button class="btn btn-next" data-next="2">Come Inside</button>
+    </section>
+
+    <!-- Scene 2 : Bouquet -->
+    <section class="scene" data-scene="2">
+      <div class="bouquet-wrap">
+        <img class="bouquet" id="bouquet" src="121.png" alt="A bouquet of pastel flowers" />
+        <div class="sparkle-ring" aria-hidden="true"></div>
+      </div>
+      <p class="line">yeh flowers meri prettiest girl ke liye.</p>
+      <button class="btn btn-next" data-next="3" id="acceptBouquet">Accept Bouquet 🌸</button>
+    </section>
+
+    <!-- Scene 3 -->
+    <section class="scene" data-scene="3">
+      <p class="line">mujhe kuch batana tha tujhe...</p>
+      <button class="btn btn-next" data-next="4">Tell me</button>
+    </section>
+
+    <!-- Scene 4 -->
+    <section class="scene" data-scene="4">
+      <p class="line">But uske liye thoda pass ana padega.</p>
+      <button class="btn btn-next" data-next="5">Okay</button>
+    </section>
+
+    <!-- Scene 5 -->
+    <section class="scene" data-scene="5">
+      <p class="line">Hmm... thoda aur pass.</p>
+      <button class="btn btn-next" data-next="6">I'm closer</button>
+    </section>
+
+    <!-- Scene 6 -->
+    <section class="scene" data-scene="6">
+      <p class="line">thoda sa aur ...</p>
+      <button class="btn btn-next" data-next="7">I'm here</button>
+    </section>
+
+    <!-- Scene 7 : Forehead kiss -->
+    <section class="scene" data-scene="7">
+      <p class="line">Perfect.</p>
+      <p class="line">acha mere ek request managi ...</p>
+      <p class="line line--delay">apna forehead screen ke pass la  ❤️</p>
+
+      <div class="kiss-zone" id="kissZone" aria-hidden="true">
+        <div class="forehead-ring"></div>
+        <div class="lips" id="lips">💋</div>
+        <div class="kiss-sparkle s1">✨</div>
+        <div class="kiss-sparkle s2">✨</div>
+        <div class="kiss-sparkle s3">✨</div>
+        <div class="butterfly b1">🦋</div>
+        <div class="butterfly b2">🦋</div>
+      </div>
+
+      <p class="line kiss-caption" id="kissCaption">*Forehead Kiss* 💋</p>
+      <p class="line kiss-caption kiss-caption--2" id="kissCaption2">kash main ye terko real main de pata but.</p>
+      <p class="line kiss-caption kiss-caption--3" id="kissCaption3">I hope isse tera headache thoda kam hua hoga 😁.</p>
+
+      <button class="btn btn-next kiss-continue" id="toLetter" data-next="8">Continue</button>
+    </section>
+
+    <!-- Scene 8 : Letter -->
+    <section class="scene scene--letter" data-scene="8">
+      <div class="bouquet-wrap bouquet-wrap--settled" aria-hidden="true">
+        <img class="bouquet bouquet--glow" id="bouquetGlow" src="23.png" alt="A bouquet of pastel flowers" />
+      </div>
+
+      <article class="letter" id="letter">
+        <p class="letter__line">Mere Cutie,</p>
+        <p class="letter__line">kash main kudh screen se bahar aa pata aur tera headache dur kar pata Aur tere headache ko gyaab kar pata. Ab ye toh main nhi kar sakta abhi but tu tension na le main hamesha tere pass hi hu 😘 </p>
+        <p class="letter__line">Chal ab thoda pani pile. Aram kar ache se. Jayda kudko push mat karna abhi, okay? harwaqt strong banna itna jaruri bhi nhi  mere samne toh bikul bhi nhi. Tu mere sath safe hai buggu, hamesha, and you deserve so much care, especially jab bhi tu low feel karti hai.</p>
+        <p class="letter__line">Soch woh flowers sachme tere hatho main hai. Aur soch ke sach main tere forehead par maine kiss ki , Soch main tere pass hu abhi, sirf tere liye. Terko smile karta dekhna mere liye sabkuch hai  jitna tu sochti hai usse kayi jayda.chal ab blush mat kare kush hoja 😁.</p>
+        <p class="letter__line">I hope har ek din tera bahut acha jay . And jab bhi tujhe meri jarurat ho buggu, kisi bhi cheez ke liye, main yhi hu tere pass.</p>
+        <p class="letter__line">agar kitna pyarr karta hu samjhunga toh shayad shabd kam pad jay.</p>
+        <p class="letter__signoff">Forever yours mere buggu ❤️</p>
+      </article>
+
+      <div class="final-note" id="finalNote">
+        <p>Chal ab wada kar hamesha sath degi aur ab aram karegi ajj ache se.</p>
+        <p>Ab panni pile.</p>
+        <p>Take care mere buggu.</p>
+        <p>Chal ab hass de thoda 🤗 Cutie Pie love you ❤️</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
