@@ -8,9 +8,32 @@ function goToScene(sceneNumber) {
   });
 }
 
+let musicStarted = false;
+
+function startMusic() {
+  const music = document.getElementById("bgMusic");
+
+  if (!music || musicStarted) return;
+
+  music.play()
+    .then(() => {
+      musicStarted = true;
+      console.log("Music started");
+    })
+    .catch((err) => {
+      console.log("Music blocked:", err);
+    });
+}
+
 function initSceneButtons() {
   document.querySelectorAll('.btn-next').forEach((btn) => {
-    btn.addEventListener('click', () => goToScene(btn.dataset.next));
+    btn.addEventListener('click', () => {
+
+      goToScene(btn.dataset.next); // move scene first
+
+      startMusic(); // then try music
+
+    });
   });
 }
 
